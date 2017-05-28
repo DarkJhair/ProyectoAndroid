@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Proyecto</string>
+
+    <!-- Estos strings que estan aqui estan siendo utilizados en la activity menu_reportes.xml -->
+    <string name="reportes">Menu reportes</string>
+    <string name="list">Listar eventos realizados</string>
+    <string name="list_future">Listar eventos futuros</string>
+    <string name="list_cancel">Listar eventos cancelados</string>
+    <string name="date_input">Ingreso generado por fecha</string>
+    <string name="view_profile">Ver perfil del usuario</string>
+    <string name="return_menu">Regresar al menu principal</string>
+    <string name="title_activity_menu_reportes_activity">menu_reportes_activity</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
 </resources>
