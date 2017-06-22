@@ -45,6 +45,24 @@ public class MenuReportes extends AppCompatActivity {
             }
         });
 
+        ButtonCancelEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuReportes.this, EventosCanceladosActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        ButtonDateInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuReportes.this, GenerarFechaActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         ButtonReturnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

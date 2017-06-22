@@ -55,6 +55,10 @@ public class EventosRealizadosActivity extends AppCompatActivity {
                 }
             }
         }
+
+        //ahora a ordenarlos del mas reciente al mas antiguo
+
+        
         ListAdapter pambisitoAdapter = new CustomAdapter(getApplicationContext(), EventosRealizados);
         ListView ListEventosRealizados = (ListView) findViewById(R.id.List_eventos_realizados);
         ListEventosRealizados.setAdapter(pambisitoAdapter);
