@@ -15,6 +15,7 @@ public class UsuarioNormal extends Usuario {
 
     public UsuarioNormal(String usuario, String contra, String nomcompleto, int edad) {
         super(usuario, contra, nomcompleto, edad);
+        eventosnormales = new ArrayList<>();
 
     }
 
