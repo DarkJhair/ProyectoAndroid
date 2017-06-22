@@ -26,6 +26,15 @@ Button btn_crear;
         btn_crear=(Button)findViewById(R.id.btcrear);
         btn_eliminar=(Button)findViewById(R.id.bteliminarusuario);
         btn_regresar=(Button)findViewById(R.id.btregresar);
+        btn_editar = (Button)findViewById(R.id.bteditaruduario);
+        btn_editar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(administrarusuarios.this,PedirUserEditar.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         btn_crear.setOnClickListener(new View.OnClickListener() {
             @Override

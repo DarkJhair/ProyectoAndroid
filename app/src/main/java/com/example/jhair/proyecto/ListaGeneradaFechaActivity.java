@@ -15,34 +15,37 @@ import com.example.jhair.proyecto.clases.EventoReligioso;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class EventosRealizadosActivity extends AppCompatActivity {
-    ArrayList <Evento> EventosRealizados;
-    int contadorDeportivos = 0;
-    int contadorReligiosos = 0;
-    int contadorMusicales = 0;
+public class ListaGeneradaFechaActivity extends AppCompatActivity {
+
+    TextView DeportivosFil;
+    TextView ReligiososFil;
+    TextView MusicalesFil;
+    TextView MontoTotalFil;
     double montoTotal = 0;
-    TextView DeportivosR;
-    TextView ReligiososR;
-    TextView MusicalesR;
-    TextView MontoTotalR;
+    int contadorDeportivos = 0;
+    int contadorMusicales = 0;
+    int contadorReligiosos = 0;
+    ArrayList<Evento> EventosFiltrados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eventos_realizados);
-        DeportivosR = (TextView) findViewById(R.id.textViewDeportivosR);
-        ReligiososR = (TextView) findViewById(R.id.textViewReligiososR);
-        MusicalesR = (TextView) findViewById(R.id.textViewMusicalesR);
-        MontoTotalR = (TextView) findViewById(R.id.textViewMontoTotalR);
+        setContentView(R.layout.activity_lista_generada_fecha);
+        DeportivosFil = (TextView) findViewById(R.id.textViewDeportivosFil);
+        ReligiososFil = (TextView) findViewById(R.id.textViewReligiososFil);
+        MusicalesFil = (TextView) findViewById(R.id.textViewMusicalesFil);
+        MontoTotalFil = (TextView) findViewById(R.id.textViewMontoTotalFil);
+
 
         /*/lo que voy a hacer es que voy a crear otro arrayList que contenga los eventos ya
         realizados, extrayendo la info del arrayList que esta en el MainClass, para asi no alterar
         la info que hay en el arraylist original
         */
-        EventosRealizados = new ArrayList<>();
+        EventosFiltrados = new ArrayList<>();
         for(Evento e : MainClass.eventos) {
-            if(Calendar.getInstance().after(e.getFecha())) {
-                EventosRealizados.add(e);
+            if(e.getFecha().after(GenerarFechaActivity.FInicial) &&
+                    e.getFecha().before(GenerarFechaActivity.FFinal)) {
+                EventosFiltrados.add(e);
                 montoTotal += e.getMontoPagar();
                 if(e instanceof EventoDeportivo) {
                     contadorDeportivos++;
@@ -55,24 +58,20 @@ public class EventosRealizadosActivity extends AppCompatActivity {
                 }
             }
         }
-
-        //ahora a ordenarlos del mas reciente al mas antiguo
-
-        
-        ListAdapter pambisitoAdapter = new CustomAdapter(getApplicationContext(), EventosRealizados);
-        ListView ListEventosRealizados = (ListView) findViewById(R.id.List_eventos_realizados);
-        ListEventosRealizados.setAdapter(pambisitoAdapter);
+        ListAdapter pambisitoAdapter = new CustomAdapter(getApplicationContext(), EventosFiltrados);
+        ListView ListEventosFuturos = (ListView) findViewById(R.id.List_eventos_filtrados);
+        ListEventosFuturos.setAdapter(pambisitoAdapter);
 
         //ahora a poner los contadores en los textViews
-        DeportivosR.setText("Eventos deportivos: "+String.valueOf(contadorDeportivos));
-        ReligiososR.setText("Eventos religiosos: "+String.valueOf(contadorReligiosos));
-        MusicalesR.setText("Eventos musicales: "+String.valueOf(contadorMusicales));
-        MontoTotalR.setText("Monto total: "+String.valueOf(montoTotal));
+        DeportivosFil.setText("Eventos deportivos: "+String.valueOf(contadorDeportivos));
+        ReligiososFil.setText("Eventos religiosos: "+String.valueOf(contadorReligiosos));
+        MusicalesFil.setText("Eventos musicales: "+String.valueOf(contadorMusicales));
+        MontoTotalFil.setText("Monto total: "+String.valueOf(montoTotal));
     }
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(EventosRealizadosActivity.this, MenuReportes.class);
+        Intent intent = new Intent(ListaGeneradaFechaActivity.this, MenuReportes.class);
         startActivity(intent);
         finish();
     }

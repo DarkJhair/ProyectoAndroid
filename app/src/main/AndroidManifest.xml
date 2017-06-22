@@ -39,16 +39,40 @@
         >>>>>>> c809736c59ccd0afa608b0dbf63a9cab5aafe7dd
         >>>>>>> 83e02b4fd5a78b136ddc0237b511a4b0375ca6c9
 
+=======
+
+        <activity android:name=".EventosCanceladosActivity" />
+        <activity android:name=".GenerarFechaActivity" />
+        <activity android:name=".ListaGeneradaFechaActivity"></activity>
+=======
+
+
+>>>>>>> a2f40a866ebab81b7663f604a684f35c3d74c18e
         <activity android:name=".administrarusuarios" />
-
         <activity android:name=".EliminarUsuario" />
-        <activity android:name=".Crear_NuevoUsuario"></activity>
+        <activity android:name=".Crear_NuevoUsuario" />
+        =======
+
+
+        =======
+
+        >>>>>>> master
+        =======
+        <activity android:name=".EventosUsers" />
+        >>>>>>> master
+        >>>>>>> 920445eea6fe99d4b37d2e33fd283f0d23bc4cda
+        <activity android:name=".EditarUser" />
+        <activity android:name=".PedirUserEditar"></activity>
+=======
 =======
 
+>>>>>>> master
 =======
-        <activity android:name=".EventosUsers"></activity>
+
 >>>>>>> master
 >>>>>>> 920445eea6fe99d4b37d2e33fd283f0d23bc4cda
+>>>>>>> 1ae1d031375636b66c263e4e42968c3e37b9d7aa
+>>>>>>> a2f40a866ebab81b7663f604a684f35c3d74c18e
     </application>
 
 </manifest>
