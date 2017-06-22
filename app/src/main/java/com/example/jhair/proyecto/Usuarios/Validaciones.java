@@ -40,6 +40,15 @@ public class Validaciones {
 
     }
 
+    public static void borrarUsuario(String usu) {
+        for (int i = 0; i < usuarioss.size(); i++) {
+            Usuario us = usuarioss.get(i);
+            if (us.getUsuario().equals(usu)) {
+                usuarioss.remove(us);
+            }
+        }
+    }
+
     public static void addUsuario(Usuario u){
         usuarioss.add(u);
     }
