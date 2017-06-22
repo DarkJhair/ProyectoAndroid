@@ -13,7 +13,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.example.jhair.proyecto.Usuarios.Usuario;
+
 import com.example.jhair.proyecto.Usuarios.UsuarioAdmin;
 import com.example.jhair.proyecto.Usuarios.UsuarioNormal;
 import com.example.jhair.proyecto.clases.EventoReligioso;
@@ -28,6 +30,7 @@ public class crear_EventoActivity extends AppCompatActivity {
     private TextView txt_fecha;
     private EditText monto;
     private Button btn_crear;
+    Usuario usu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +78,13 @@ public class crear_EventoActivity extends AppCompatActivity {
                     intent.putExtra("monto", mont);
                     switch (selectItm) {
                         case "Musical":
+                            Toast.makeText(crear_EventoActivity.this,"La cantidad maxima permitida es de 25,000 personas",Toast.LENGTH_SHORT).show();
+                            intent.putExtra("FUENTE",1);
+                            startActivity(intent);
+                            finish();
+                            break;
                         case "Deportivo":
+                            Toast.makeText(crear_EventoActivity.this,"La cantidad maxima permitida es de 20,000 personas",Toast.LENGTH_SHORT).show();
                             intent.putExtra("FUENTE",1);
                             startActivity(intent);
                             finish();
@@ -86,13 +95,16 @@ public class crear_EventoActivity extends AppCompatActivity {
                             } else {
                                 EventoReligioso er = new EventoReligioso(Integer.parseInt(codigo.getText().toString()), titulo.getText().toString(), ((DatePickerFragment) newFragment).getSc(), mont, descripcion.getText().toString());
                                 MainClass.añadirEvento(er);
-                                Usuario usu = MainActivity.usuarioActivo;
+
+                                usu = MainActivity.usuarioActivo;
                                 if(usu instanceof UsuarioAdmin){
-                                    UsuarioAdmin.agregarEventoAdmin(er);
+                                    ((UsuarioAdmin) usu).agregarEventoAdmin(er);
                                 }else if(usu instanceof UsuarioNormal){
-                                    UsuarioNormal.agregarEventoNormal(er);
+                                    ((UsuarioNormal) usu).agregarEventoNormal(er);
                                 }
+
                                 Toast.makeText(crear_EventoActivity.this, "Evento creado exitosamente", Toast.LENGTH_LONG).show();
+                                Toast.makeText(crear_EventoActivity.this,"La cantidad maxima permitida es de 30,000 personas",Toast.LENGTH_SHORT).show();
                                 intent = new Intent(crear_EventoActivity.this, MenuMainActivity.class);
                                 startActivity(intent);
                                 finish();

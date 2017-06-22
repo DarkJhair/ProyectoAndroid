@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.jhair.proyecto.clases.Evento;
@@ -22,8 +23,11 @@ public class EditarJugadores extends AppCompatActivity {
     ArrayList<String> jugadors2;
     EditText [][] arr = new EditText[2][10];
     int codigo;
+    int fuente;
     Button guardar;
     EventoDeportivo eve;
+    TextView txtEquip1;
+    TextView txtEquip2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +35,9 @@ public class EditarJugadores extends AppCompatActivity {
         initComponents();
     }
     private void initComponents(){
+        txtEquip1 = (TextView) findViewById(R.id.txtEquip1);
+        txtEquip2 = (TextView) findViewById(R.id.txtEquip2);
+        fuente = getIntent().getExtras().getInt("fuente");
         guardar = (Button)findViewById(R.id.guardarBtn);
         codigo = getIntent().getExtras().getInt("codEvent");
         jugadoresGridLayout = (GridLayout) findViewById(R.id.jugadoresGridLayout);
@@ -47,6 +54,16 @@ public class EditarJugadores extends AppCompatActivity {
         almacenarEdt();
         setDatos(1);
         setDatos(2);
+        if(fuente == 2){
+            jugadoresGridLayout.removeView(guardar);
+            for(int i = 0; i < arr.length;i++) {
+                for (int m = 0; m < arr[i].length; m++) {
+                    if(arr[i][m] == null){continue;}
+                    arr[i][m].setEnabled(false);
+
+                }
+            }
+        }
         guardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,10 +95,10 @@ public class EditarJugadores extends AppCompatActivity {
         }
     }
 
-    //TODO: por aca voy, editando que se coloquen los textos de cada jugador.
     private void setDatos(int equipo){
 
         if(equipo == 1){
+            txtEquip1.setText(eve.getEquipo1());
             if(jugadors1.size() == 0){
                 for(int i = 0; i < arr.length;i++) {
                     for (int m = 0; m < arr[i].length; m++) {
@@ -108,6 +125,7 @@ public class EditarJugadores extends AppCompatActivity {
 
             }
         }else{
+            txtEquip2.setText(eve.getEquipo2());
             if(jugadors2.size() == 0){
                 for(int i = 0; i < arr.length;i++) {
                     for (int m = 0; m < arr[i].length; m++) {
@@ -160,9 +178,17 @@ public class EditarJugadores extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(EditarJugadores.this,EditarEvento.class);
-        intent.putExtra("codEvent",codigo);
-        startActivity(intent);
-        finish();
+        if(fuente == 2){
+            Intent intent = new Intent(EditarJugadores.this,DatosEventoActivity.class);
+            intent.putExtra("codigo",codigo);
+            startActivity(intent);
+            finish();
+        }else{
+            Intent intent = new Intent(EditarJugadores.this,EditarEvento.class);
+            intent.putExtra("codEvent",codigo);
+            startActivity(intent);
+            finish();
+        }
+
     }
 }
