@@ -7,17 +7,8 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="929c9a7649cf8746e3d58d637907eaef76c27aec">
+        sha1="5e72be5228d6832495b0018dd22f5b3cc9062b92">
         <dex dex="C:\Users\Jhair\Desktop\Damason\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_c9940addca780f6afe556f3288eae3c902fe159b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Jhair\.android\build-cache\5aa6a84d25292a4b2f7f2755fd33b1c3ed4a4a2c\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
-        <dex dex="C:\Users\Jhair\Desktop\Damason\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9a05f29131ed070f8e80eb50a453222fe1c31bbc\classes.dex" />
     </item>
     <item
         is-multidex="true"
