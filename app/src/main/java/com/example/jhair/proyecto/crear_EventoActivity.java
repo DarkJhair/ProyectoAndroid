@@ -78,7 +78,10 @@ public class crear_EventoActivity extends AppCompatActivity {
                     intent.putExtra("monto", mont);
                     switch (selectItm) {
                         case "Musical":
+                            Toast.makeText(crear_EventoActivity.this,"La cantidad maxima permitida es de 25,000 personas",Toast.LENGTH_SHORT).show();
+                            break;
                         case "Deportivo":
+                            Toast.makeText(crear_EventoActivity.this,"La cantidad maxima permitida es de 20,000 personas",Toast.LENGTH_SHORT).show();
                             intent.putExtra("FUENTE",1);
                             startActivity(intent);
                             finish();
@@ -90,18 +93,15 @@ public class crear_EventoActivity extends AppCompatActivity {
                                 EventoReligioso er = new EventoReligioso(Integer.parseInt(codigo.getText().toString()), titulo.getText().toString(), ((DatePickerFragment) newFragment).getSc(), mont, descripcion.getText().toString());
                                 MainClass.añadirEvento(er);
 
-                                if(MainActivity.usuarioActivo instanceof UsuarioAdmin){
-
-                                }else if(MainActivity.usuarioActivo instanceof UsuarioNormal)
-
                                 usu = MainActivity.usuarioActivo;
                                 if(usu instanceof UsuarioAdmin){
-                                    UsuarioAdmin.agregarEventoAdmin(er);
+                                    ((UsuarioAdmin) usu).agregarEventoAdmin(er);
                                 }else if(usu instanceof UsuarioNormal){
-                                    UsuarioNormal.agregarEventoNormal(er);
+                                    ((UsuarioNormal) usu).agregarEventoNormal(er);
                                 }
 
                                 Toast.makeText(crear_EventoActivity.this, "Evento creado exitosamente", Toast.LENGTH_LONG).show();
+                                Toast.makeText(crear_EventoActivity.this,"La cantidad maxima permitida es de 30,000 personas",Toast.LENGTH_SHORT).show();
                                 intent = new Intent(crear_EventoActivity.this, MenuMainActivity.class);
                                 startActivity(intent);
                                 finish();
