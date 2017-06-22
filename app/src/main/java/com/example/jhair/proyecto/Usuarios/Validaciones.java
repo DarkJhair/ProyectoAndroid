@@ -1,5 +1,7 @@
 package com.example.jhair.proyecto.Usuarios;
 
+import com.example.jhair.proyecto.clases.Evento;
+
 import java.util.ArrayList;
 
 /**
@@ -8,6 +10,7 @@ import java.util.ArrayList;
 
 public class Validaciones {
     public static ArrayList<Usuario> usuarioss =new ArrayList<>();
+
     public static UsuarioNormal usunormal[];
     private static int contador;
     public static void inicializarusuariosnomales(){
@@ -70,6 +73,25 @@ public class Validaciones {
             }
         }
         return -1;
+    }
+
+    public static boolean comprobarEventoUser(Evento eve, Usuario usu){
+        if(usu instanceof UsuarioNormal){
+            UsuarioNormal usun = (UsuarioNormal) usu;
+            for(int  i =0; i <usun.eventosnormales.size();i++){
+                if(usun.eventosnormales.get(i).equals(eve.getCodigo())){
+                    return true;
+                }
+            }
+        }else if(usu instanceof  UsuarioAdmin){
+            UsuarioAdmin usua = (UsuarioAdmin) usu;
+            for(int  i =0; i <usua.eventosadmin.size();i++){
+                if(usua.eventosadmin.get(i).equals(eve.getCodigo())){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
 
