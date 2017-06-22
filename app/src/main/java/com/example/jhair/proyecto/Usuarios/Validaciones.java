@@ -78,18 +78,19 @@ public class Validaciones {
     public static boolean comprobarEventoUser(Evento eve, Usuario usu){
         if(usu instanceof UsuarioNormal){
             UsuarioNormal usun = (UsuarioNormal) usu;
-            for(int  i =0; i <usun.eventosnormales.size();i++){
-                if(usun.eventosnormales.get(i).equals(eve.getCodigo())){
-                    return true;
+                for (int i = 0; i < usun.eventosnormales.size(); i++) {
+                    if (usun.eventosnormales.get(i).getCodigo() == eve.getCodigo()) {
+                        return true;
+                    }
                 }
-            }
+
         }else if(usu instanceof  UsuarioAdmin){
             UsuarioAdmin usua = (UsuarioAdmin) usu;
-            for(int  i =0; i <usua.eventosadmin.size();i++){
-                if(usua.eventosadmin.get(i).equals(eve.getCodigo())){
-                    return true;
+                for (int i = 0; i < usua.eventosadmin.size(); i++) {
+                    if (usua.eventosadmin.get(i).getCodigo() == eve.getCodigo()) {
+                        return true;
+                    }
                 }
-            }
         }
         return false;
     }
