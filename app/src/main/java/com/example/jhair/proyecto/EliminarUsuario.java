@@ -16,7 +16,7 @@ public class EliminarUsuario extends AppCompatActivity {
     Button btn_regresar;
     EditText usuario_eliminar;
     String usuarioeli;
-    Usuario usuactivo;
+
 
 
     @Override
@@ -60,6 +60,15 @@ public class EliminarUsuario extends AppCompatActivity {
 
                 }
             });
+
+        btn_regresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EliminarUsuario.this,administrarusuarios.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
     }

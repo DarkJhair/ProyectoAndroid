@@ -24,11 +24,21 @@ Button btn_crear;
 
     public void Initcomponents(){
         btn_eliminar=(Button)findViewById(R.id.bteliminarusuario);
+        btn_regresar=(Button)findViewById(R.id.btregresar);
 
         btn_eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(administrarusuarios.this,EliminarUsuario.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        btn_regresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(administrarusuarios.this,MenuMainActivity.class);
                 startActivity(intent);
                 finish();
             }
