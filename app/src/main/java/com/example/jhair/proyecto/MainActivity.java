@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.jhair.proyecto.Usuarios.Usuario;
+import com.example.jhair.proyecto.Usuarios.UsuarioAdmin;
 import com.example.jhair.proyecto.Usuarios.Validaciones;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private void initComponents(){
 
 
-        Usuario nw = new Usuario("admin","sp","Administrador",20);
+        UsuarioAdmin nw = new UsuarioAdmin("admin","sp","Administrador",20);
         Validaciones.usuarioss.add(nw);
         entrar = (Button)findViewById(R.id.button2);
         registrate =(Button)findViewById(R.id.button);

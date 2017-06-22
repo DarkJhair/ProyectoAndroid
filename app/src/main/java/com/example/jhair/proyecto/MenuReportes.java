@@ -26,7 +26,14 @@ public class MenuReportes extends AppCompatActivity {
         ButtonReturnMenu = (Button) findViewById(R.id.button_return_menu);
 
         //a partir de aquí pondré lo que hacen los botones xD
-
+        ButtonProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuReportes.this,perfil.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         ButtonListRealizados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

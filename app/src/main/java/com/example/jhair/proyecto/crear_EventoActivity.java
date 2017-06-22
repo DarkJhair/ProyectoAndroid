@@ -79,6 +79,9 @@ public class crear_EventoActivity extends AppCompatActivity {
                     switch (selectItm) {
                         case "Musical":
                             Toast.makeText(crear_EventoActivity.this,"La cantidad maxima permitida es de 25,000 personas",Toast.LENGTH_SHORT).show();
+                            intent.putExtra("FUENTE",1);
+                            startActivity(intent);
+                            finish();
                             break;
                         case "Deportivo":
                             Toast.makeText(crear_EventoActivity.this,"La cantidad maxima permitida es de 20,000 personas",Toast.LENGTH_SHORT).show();
