@@ -23,8 +23,21 @@ Button btn_crear;
 
 
     public void Initcomponents(){
+        btn_crear=(Button)findViewById(R.id.btcrear);
         btn_eliminar=(Button)findViewById(R.id.bteliminarusuario);
         btn_regresar=(Button)findViewById(R.id.btregresar);
+
+        btn_crear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(administrarusuarios.this,Crear_NuevoUsuario.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+
 
         btn_eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
