@@ -7,7 +7,12 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
+<<<<<<< HEAD
         sha1="65cba638a14eff598317342d9de6cf580ad7a61c">
+=======
+<<<<<<< HEAD
+        sha1="5e72be5228d6832495b0018dd22f5b3cc9062b92">
+>>>>>>> 920445eea6fe99d4b37d2e33fd283f0d23bc4cda
         <dex dex="C:\Users\Jhair\Desktop\Damason\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_c9940addca780f6afe556f3288eae3c902fe159b\classes.dex" />
     </item>
     <item
@@ -18,6 +23,10 @@
         revision="25.0.3"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
         <dex dex="C:\Users\Jhair\Desktop\Damason\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_7c7fab04743e7a097ca9ba10d0ef4820baec86fb\classes.dex" />
+=======
+        sha1="f2aac3017df1774518098c5eaac77d06453b014e">
+        <dex dex="/home/damasofc/AndroidStudioProjects/ProyectoAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7e6687aefc82588213d49b7ec2798a2f59a7f310/classes.dex" />
+>>>>>>> master
     </item>
 
 </items>

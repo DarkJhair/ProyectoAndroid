@@ -48,9 +48,9 @@ public class CrearEvent_MusicalActivity extends AppCompatActivity {
                     MainClass.añadirEvento(em);
                     Usuario usu = MainActivity.usuarioActivo;
                     if(usu instanceof UsuarioAdmin){
-                        UsuarioAdmin.agregarEventoAdmin(em);
+                        ((UsuarioAdmin) usu).agregarEventoAdmin(em);
                     }else if(usu instanceof UsuarioNormal){
-                        UsuarioNormal.agregarEventoNormal(em);
+                        ((UsuarioNormal) usu).agregarEventoNormal(em);
                     }
                     Toast.makeText(CrearEvent_MusicalActivity.this,"Evento creado exitosamente",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(CrearEvent_MusicalActivity.this,MenuMainActivity.class);
