@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.jhair.proyecto.Usuarios.Usuario;
 import com.example.jhair.proyecto.Usuarios.UsuarioAdmin;
 import com.example.jhair.proyecto.Usuarios.UsuarioNormal;
+import com.example.jhair.proyecto.Usuarios.Validaciones;
 import com.example.jhair.proyecto.clases.Evento;
 import com.example.jhair.proyecto.clases.EventoDeportivo;
 import com.example.jhair.proyecto.clases.EventoMusical;
@@ -34,11 +35,7 @@ public class Eliminar_EventoActivity extends AppCompatActivity {
         codigoCancel = (EditText) findViewById(R.id.codigoEvento);
         cancelar = (Button)findViewById(R.id.cancelEvento);
         titulo = (TextView)findViewById(R.id.titulo_Eliminar);
-        if(MainActivity.usuarioActivo instanceof UsuarioNormal){
-            usu = (UsuarioNormal)MainActivity.usuarioActivo;
-        }else{
-            usu = (UsuarioAdmin)MainActivity.usuarioActivo;
-        }
+        usu = MainActivity.usuarioActivo;
         /*
         Este if que recoge un intent, sirve para ahorrarme de hacer un activity mas para cuando le de click en el
         boton de editar evento, asi simplemente le cambio el nombre del titulo y del boton
@@ -76,7 +73,7 @@ public class Eliminar_EventoActivity extends AppCompatActivity {
                         //TODO: aca me falta colocar un if que compruebe si ese codigo de evento,
                         //TODO: es el de algun evento creado por el usuario activo, ya que solo el
                         //TODO: USUARIO QUE creo el evento, puede eliminarlo
-                        //if(comprobarEventoUser()) {
+                        if(Validaciones.comprobarEventoUser(eve,usu)) {
                             Calendar hoy = Calendar.getInstance();
                             if (eve.getFecha().after(hoy)) {
                                 //en este if, reviso si el evento es evento musical o deportivo,
@@ -105,9 +102,9 @@ public class Eliminar_EventoActivity extends AppCompatActivity {
                             } else {
                                 Toast.makeText(Eliminar_EventoActivity.this, "El evento no puede ser cancelado porque ya paso", Toast.LENGTH_SHORT).show();
                             }
-                        //}else{
-                          //  Toast.makeText(Eliminar_EventoActivity.this,"No puede acceder a este Evento porque usted no lo creo", Toast.LENGTH_SHORT).show();
-                        //}
+                        }else{
+                            Toast.makeText(Eliminar_EventoActivity.this,"No puede cancelar este Evento porque usted no lo creo", Toast.LENGTH_SHORT).show();
+                        }
                     } else {
                         Toast.makeText(Eliminar_EventoActivity.this, codEvent == -1 ? "Porfavor escriba un codigo de evento" : "No hay ningun evento con ese codigo", Toast.LENGTH_SHORT).show();
                     }
