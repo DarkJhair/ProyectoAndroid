@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class UsuarioAdmin extends Usuario {
 
-    public static ArrayList<Evento> eventosadmin;
+    public ArrayList<Evento> eventosadmin;
 
 
     public UsuarioAdmin(String usuario, String contra, String nomcompleto, int edad) {
@@ -19,8 +19,11 @@ public class UsuarioAdmin extends Usuario {
 
     }
 
-    public static void agregarEventoAdmin(Evento e){
+    public  void agregarEventoAdmin(Evento e){
         eventosadmin.add(e);
     }
 
+    public  ArrayList<Evento> getEventosadmin() {
+        return eventosadmin;
+    }
 }

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class UsuarioNormal extends Usuario {
 
-    public static ArrayList<Evento> eventosnormales;
+    public ArrayList<Evento> eventosnormales;
 
 
     public UsuarioNormal(String usuario, String contra, String nomcompleto, int edad) {
@@ -19,13 +19,11 @@ public class UsuarioNormal extends Usuario {
 
     }
 
-    public static void agregarEventoNormal(Evento e){
+    public  void agregarEventoNormal(Evento e){
         eventosnormales.add(e);
     }
 
-
-
-
-
-
+    public  ArrayList<Evento> getEventosnormales() {
+        return eventosnormales;
+    }
 }
