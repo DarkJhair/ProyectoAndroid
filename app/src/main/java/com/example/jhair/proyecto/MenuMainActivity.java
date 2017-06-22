@@ -13,6 +13,7 @@ public class MenuMainActivity extends AppCompatActivity {
     Button btn_admin;
     Button btn_salir;
     Button btn_reporter;
+    Button btn_adminusuarios;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +50,17 @@ public class MenuMainActivity extends AppCompatActivity {
                 finish();
             }
         });
+        btn_adminusuarios=(Button)findViewById(R.id.btn_usuarios);
+        btn_adminusuarios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent usu =new Intent(MenuMainActivity.this,administrarusuarios.class);
+                startActivity(usu);
+                finish();
+            }
+        });
+
+
     }
 
     @Override

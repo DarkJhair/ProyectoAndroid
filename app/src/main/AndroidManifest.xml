@@ -38,7 +38,12 @@
         <activity android:name=".EditarJugadores" />
         >>>>>>> c809736c59ccd0afa608b0dbf63a9cab5aafe7dd
         >>>>>>> 83e02b4fd5a78b136ddc0237b511a4b0375ca6c9
+<<<<<<< HEAD
+        <activity android:name=".administrarusuarios" />
+        <activity android:name=".EliminarUsuario"></activity>
+=======
         <activity android:name=".EventosUsers"></activity>
+>>>>>>> master
     </application>
 
 </manifest>
