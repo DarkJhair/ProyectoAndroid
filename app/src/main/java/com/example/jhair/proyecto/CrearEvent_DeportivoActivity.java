@@ -89,9 +89,9 @@ public class CrearEvent_DeportivoActivity extends AppCompatActivity {
                             MainClass.añadirEvento(ed);
                             Usuario usu = MainActivity.usuarioActivo;
                             if(usu instanceof UsuarioAdmin){
-                                UsuarioAdmin.agregarEventoAdmin(ed);
+                                ((UsuarioAdmin) usu).agregarEventoAdmin(ed);
                             }else if(usu instanceof UsuarioNormal){
-                                UsuarioNormal.agregarEventoNormal(ed);
+                                ((UsuarioNormal) usu).agregarEventoNormal(ed);
                             }
                             Toast.makeText(CrearEvent_DeportivoActivity.this, "Evento creado exitosamente", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(CrearEvent_DeportivoActivity.this, MenuMainActivity.class);

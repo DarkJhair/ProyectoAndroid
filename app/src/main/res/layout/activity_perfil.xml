@@ -6,12 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="6"
+    android:id="@+id/perfilLinear"
     tools:context="com.example.jhair.proyecto.perfil">
 
     <LinearLayout
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <TextView
             android:id="@+id/tvlogo"
             android:text="Mi Perfil"
@@ -21,6 +23,14 @@
             android:layout_height="match_parent" />
 
     </LinearLayout>
+    <TextView
+        android:text="user"
+        android:id="@+id/txtUser"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"/>
 
     <LinearLayout
         android:layout_weight="1"
@@ -28,16 +38,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <TextView
-        android:text="Nombre"
+        android:text="Nombre:"
         android:textAlignment="center"
         android:layout_weight="1"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:layout_width="match_parent"
 
         android:layout_height="match_parent" />
         <TextView
-            android:textAlignment="center"
-            android:textSize="30dp"
+            android:id="@+id/txtName"
+            android:textSize="20dp"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -49,40 +59,40 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
-            android:text="Contrasenia"
+            android:text="Contraseña:"
             android:textAlignment="center"
             android:layout_weight="1"
-            android:textSize="30dp"
-            android:layout_width="match_parent"
-
-            android:layout_height="match_parent" />
-        <TextView
-            android:textAlignment="center"
-            android:textSize="30dp"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:weightSum="2"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:text="Edad"
-            android:textAlignment="center"
-            android:layout_weight="1"
-            android:textSize="30dp"
-            android:layout_width="match_parent"
-
-            android:layout_height="match_parent" />
-        <TextView
-            android:textAlignment="center"
             android:textSize="25dp"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txtContra"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="Edad:"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textSize="25dp"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txtEdad"
+            android:textSize="20dp"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -101,6 +111,12 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btn_Event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/anaranjado"
+            android:text="Ver evento Creados"/>
 
     </LinearLayout>
 
