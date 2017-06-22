@@ -9,6 +9,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="95608065-58d5-464d-8272-c74ddb124724" name="Default" comment="" />
+=======
     <list default="true" id="95608065-58d5-464d-8272-c74ddb124724" name="Default" comment="">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,6 +32,7 @@
 >>>>>>> master
 >>>>>>> 920445eea6fe99d4b37d2e33fd283f0d23bc4cda
     </list>
+>>>>>>> master
     <ignored path="ProyectoAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -88,6 +92,11 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/perfil.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+            <state relative-caret-position="1044">
+              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+              <folding />
+=======
+<<<<<<< HEAD
             <state relative-caret-position="1854">
               <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
               <folding />
@@ -111,6 +120,7 @@
               <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
               <folding />
 >>>>>>> 920445eea6fe99d4b37d2e33fd283f0d23bc4cda
+>>>>>>> master
             </state>
           </provider>
         </entry>
@@ -200,6 +210,10 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/crear_EventoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+            <state relative-caret-position="434">
+              <caret line="95" column="62" selection-start-line="95" selection-start-column="62" selection-end-line="95" selection-end-column="62" />
+=======
+<<<<<<< HEAD
             <state relative-caret-position="234">
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
 =======
@@ -217,6 +231,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+>>>>>>> master
               <folding />
             </state>
           </provider>
@@ -2164,17 +2179,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane />
       </pane>
       <pane id="Scratches" />
 <<<<<<< HEAD
+>>>>>>> master
       <pane id="ProjectPane">
         <subPane />
       </pane>
       <pane id="PackagesPane" />
+<<<<<<< HEAD
+      <pane id="Scratches" />
 =======
+=======
+>>>>>>> master
 >>>>>>> master
       <pane id="AndroidView">
         <subPane>
@@ -2204,12 +2226,16 @@
 <<<<<<< HEAD
       <pane id="Scope" />
 =======
+<<<<<<< HEAD
+      <pane id="Scope" />
+=======
       <pane id="ProjectPane">
         <subPane />
       </pane>
       <pane id="PackagesPane" />
 >>>>>>> master
 >>>>>>> e63e2cacdb1c448bf34f17cf853a09b88852067e
+>>>>>>> master
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2623,7 +2649,11 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+=======
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> master
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2655,8 +2685,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/crear_EventoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1116">
+          <caret line="82" column="50" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/perfil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/crear_EventoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
         <state relative-caret-position="1152">
           <caret line="84" column="34" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
@@ -3245,6 +3296,10 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jhair/proyecto/crear_EventoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+        <state relative-caret-position="434">
+          <caret line="95" column="62" selection-start-line="95" selection-start-column="62" selection-end-line="95" selection-end-column="62" />
+=======
+<<<<<<< HEAD
         <state relative-caret-position="234">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
 =======
@@ -3260,6 +3315,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
