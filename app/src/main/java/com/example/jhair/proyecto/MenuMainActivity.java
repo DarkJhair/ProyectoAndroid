@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.jhair.proyecto.Usuarios.Usuario;
 import com.example.jhair.proyecto.Usuarios.UsuarioAdmin;
 import com.example.jhair.proyecto.Usuarios.UsuarioLimitado;
 import com.example.jhair.proyecto.Usuarios.UsuarioNormal;
@@ -26,6 +27,7 @@ public class MenuMainActivity extends AppCompatActivity {
     }
 
     public void initComponents(){
+        final Usuario usu=MainActivity.usuarioActivo;
         btn_reporter = (Button)findViewById(R.id.btn_reportes);
         btn_reporter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,12 +45,11 @@ public class MenuMainActivity extends AppCompatActivity {
 
                 @Override
                 public void onClick(View v) {
-                    if(MainActivity.usuarioActivo instanceof UsuarioAdmin){
+
                     Intent intent = new Intent(MenuMainActivity.this,admin_EventosActivity.class);
                     startActivity(intent);
                     finish();
-                    }else if(MainActivity.usuarioActivo instanceof UsuarioNormal||MainActivity.usuarioActivo instanceof UsuarioLimitado) {
-                        Toast.makeText(MenuMainActivity.this, "Debe ser admin para esta opcion", Toast.LENGTH_SHORT).show();}
+
                 }
             });
 
@@ -68,10 +69,14 @@ public class MenuMainActivity extends AppCompatActivity {
         btn_adminusuarios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent usu =new Intent(MenuMainActivity.this,administrarusuarios.class);
-                startActivity(usu);
-                finish();
-            }
+                if(usu instanceof UsuarioAdmin) {
+                    Intent usu = new Intent(MenuMainActivity.this, administrarusuarios.class);
+                    startActivity(usu);
+                    finish();
+                }else{
+                    Toast.makeText(MenuMainActivity.this, "Debe ser admin para esta opcion", Toast.LENGTH_SHORT).show();}
+                }
+
         });
 
 
