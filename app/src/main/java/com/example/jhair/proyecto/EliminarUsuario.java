@@ -41,7 +41,11 @@ public class EliminarUsuario extends AppCompatActivity {
                     if (usuario_eliminar.getText().toString().equals("")){
                         Toast.makeText(EliminarUsuario.this,"Campo Vacio",Toast.LENGTH_LONG).show();
 
-                    }else{
+                    }else if(usuario_eliminar.getText().toString().equals("admin")){
+                        Toast.makeText(EliminarUsuario.this,"No se puede eliminar el administrador",Toast.LENGTH_LONG).show();
+                    }
+
+                    else{
                         if(Validaciones.comprobarUsuario(usuario_eliminar.getText().toString())){
 
                             Validaciones.borrarUsuario(usuario_eliminar.getText().toString());
